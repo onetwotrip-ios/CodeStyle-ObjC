@@ -3,7 +3,7 @@ Objective C Code Style
 
 ### isEqual Implementation
 
-Given hierarchy NSObject -> A -> B
+Given hierarchy B -> A -> NSObject
 
 ```objc
 // A's isEqual:
@@ -20,7 +20,7 @@ Given hierarchy NSObject -> A -> B
 // B's isEqual:
 - (BOOL)isEqual:(id)object {
     // if the superclass doesn't like it then we're not equal
-    if(![super isEqual: object]) {
+    if(![super isEqual:object]) {
         return NO;
     }
     // if it's not an instance of the subclass, then trust the superclass
